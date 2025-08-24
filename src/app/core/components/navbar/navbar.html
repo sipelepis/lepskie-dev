@@ -1,0 +1,23 @@
+<div class="shadow-b-sm border-b border-b-gray-100 flex flex-row justify-between align-center items-center p-5">
+  <div>
+    <hlm-avatar variant="large">
+      <img ngSrc="['/assets/avatar.png']" alt="spartan logo. Resembling a spartanic shield" hlmAvatarImage fill/>
+      <span class="bg-[#FD005B] text-white" hlmAvatarFallback>RG</span>
+    </hlm-avatar>
+  </div>
+  <div class="flex flex-row gap-8">
+    <div class="flex flex-row gap-4">
+      <a hlmBtn variant="link" routerLink="/" class="cursor-pointer">Home</a>
+      <a hlmBtn variant="link" routerLink="/about" class="cursor-pointer">About</a>
+      <a hlmBtn variant="link" routerLink="/contact" class="cursor-pointer">Contact</a>
+    </div>
+    <button brnToggle hlm (click)="toggleTheme()" [state]="toggleState()"
+            [value]="systemTheme()" class="cursor-pointer">
+      @if (toggleState() === 'on') {
+        <ng-icon hlm size="sm" name="lucideSun"/>
+      } @else {
+        <ng-icon hlm size="sm" name="lucideMoon"/>
+      }
+    </button>
+  </div>
+</div>
