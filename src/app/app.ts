@@ -1,7 +1,8 @@
-import {Component, signal} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {Navbar} from './core/components/navbar/navbar';
 import {Footer} from './core/components/footer/footer';
+import {Theme} from '@core/services/theme';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,5 @@ import {Footer} from './core/components/footer/footer';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('lepskie.dev');
+  protected themeService = inject(Theme);
 }

@@ -1,4 +1,4 @@
-import {Component, signal} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {RouterLink} from '@angular/router';
 import {HlmButton} from '@spartan-ng/helm/button';
 import {HlmAvatar, HlmAvatarFallback, HlmAvatarImage} from '@spartan-ng/helm/avatar';
@@ -8,9 +8,7 @@ import {lucideItalic, lucideMoon, lucideSun} from '@ng-icons/lucide';
 import {BrnToggle} from '@spartan-ng/brain/toggle';
 import {HlmIcon} from '@spartan-ng/helm/icon';
 import {HlmToggle} from '@spartan-ng/helm/toggle';
-
-type Theme = "light" | "dark";
-type ToggleState = "on" | "off";
+import {Theme} from '@core/services/theme';
 
 @Component({
   selector: 'app-navbar',
@@ -21,11 +19,6 @@ type ToggleState = "on" | "off";
   styleUrl: './navbar.css'
 })
 export class Navbar {
-  systemTheme = signal<Theme>("dark");
-  toggleState = signal<ToggleState>("off");
-
-  toggleTheme() {
-    this.toggleState.update(state => state === "on" ? "off" : "on");
-  }
+  protected themeService = inject(Theme);
 
 }
