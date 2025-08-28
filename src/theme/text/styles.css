@@ -1,0 +1,19 @@
+p, span, a {
+  @apply text-[var(--text-primary)] text-base xl:text-lg;
+}
+
+h1 {
+  @apply text-[var(--text-primary)] text-4xl xl:text-5xl font-bold;
+}
+
+h2 {
+  @apply text-[var(--text-primary)] text-3xl xl:text-4xl font-semibold;
+}
+
+h3 {
+  @apply text-[var(--text-primary)] text-2xl xl:text-3xl font-semibold;
+}
+
+h4, h5, h6 {
+  @apply text-[var(--text-primary)] text-xl xl:text-2xl font-medium;
+}

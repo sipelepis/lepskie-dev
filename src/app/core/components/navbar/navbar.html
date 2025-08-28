@@ -1,18 +1,21 @@
-<div class="shadow-b-sm border-b border-b-gray-100 flex flex-row justify-between align-center items-center p-5">
+<div class="shadow-b-sm flex flex-row justify-between align-center items-center p-5">
   <div>
     <hlm-avatar variant="large">
-      <img ngSrc="['/assets/avatar.png']" alt="spartan logo. Resembling a spartanic shield" hlmAvatarImage fill/>
-      <span class="bg-[#FD005B] text-white" hlmAvatarFallback>RG</span>
+      <span class="bg-secondary text-white font-bold" hlmAvatarFallback>/ep</span>
     </hlm-avatar>
   </div>
   <div class="flex flex-row gap-8">
     <div class="flex flex-row gap-4">
-      <a hlmBtn variant="link" routerLink="/" class="cursor-pointer">Home</a>
-      <a hlmBtn variant="link" routerLink="/about" class="cursor-pointer">About</a>
-      <a hlmBtn variant="link" routerLink="/contact" class="cursor-pointer">Contact</a>
+      <a class="cursor-pointer" hlmBtn routerLink="/" style="color: var(--text-primary);"
+         variant="link">Home</a>
+      <a class="cursor-pointer" hlmBtn routerLink="/about" style="color: var(--text-primary);" variant="link">About</a>
+      <a class="cursor-pointer" hlmBtn routerLink="/contact" style="color: var(--text-primary);"
+         variant="link">Contact</a>
     </div>
-    <button brnToggle hlm (click)="themeService.toggleTheme()" [state]="themeService.toggleState()"
-            [value]="themeService.toggleState()" class="cursor-pointer">
+    <button (click)="themeService.toggleTheme()" [state]="themeService.toggleState()"
+            [value]="themeService.toggleState()" brnToggle
+            class="cursor-pointer rounded" hlm
+            style="color: var(--text-primary); background-color: var(--bg-secondary);">
       @if (themeService.toggleState() === 'on') {
         <ng-icon hlm size="sm" name="lucideSun"/>
       } @else {

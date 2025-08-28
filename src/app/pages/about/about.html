@@ -1,1 +1,29 @@
-<p>about works!</p>
+<div [id]="pageTitle + '-page'" class="flex-1 h-full w-full flex flex-col font-mono p-5">
+  <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-5">
+    <div [id]="pageTitle + '-section-1'" class="flex flex-col">
+      <img
+        alt="Phillip Moran's Logo"
+        class="object-cover"
+        height="400"
+        ngSrc="/lep.png"
+        width="400"
+      />
+    </div>
+
+    <div [id]="pageTitle + '-section-2'" class="flex flex-col justify-center">
+      <h4 class="text-slate-300 italic font-extralight text-xl">
+        Hello, it's me
+      </h4>
+      <h1 class="text-slate-300 text-5xl">
+        Phillip Moran
+      </h1>
+      <br/>
+      <p class="text-gray-800 dark:text-white font-mono text-xl">
+        A hard-working and career-driven person looking for a CS/IT job opportunity in your company where I can provide
+        my
+        services while training to improve my skills in a real-world working environment.
+      </p>
+    </div>
+  </div>
+
+</div>

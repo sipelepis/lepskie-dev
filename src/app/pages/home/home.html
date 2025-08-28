@@ -1,3 +1,73 @@
-<div class="flex-1 h-full">
-  Home Works!
+<div [id]="pageTitle + '-page'" class="flex-1 h-full w-full flex flex-col font-mono p-5">
+  <div [id]="pageTitle + '-section-1'" class="flex flex-col">
+    <h4 class="text-slate-300 italic font-extralight text-xl">
+      Welcome to LepskieDev!
+    </h4>
+    <br/>
+    <p class="text-gray-800 dark:text-white font-mono text-xl">
+      I'm a software engineer with a passion for creating innovative solutions that change the world for the better.
+      I enjoy working on projects that push the boundaries of what's possible and make a meaningful impact.
+    </p>
+    <br/>
+    <p class="text-gray-800 dark:text-white text-xl">
+      I'm always looking for new challenges and opportunities to learn and grow. If you have a project in mind or just
+      want to chat, feel free to reach out.
+    </p>
+    <br/>
+    <p class="text-gray-800 dark:text-white text-xl">
+      Let's connect and create something amazing together!
+    </p>
+  </div>
+
+  <div [id]="pageTitle + '-section-2'" class="flex flex-col w-full mt-5">
+    <!-- Projects -->
+    <div [id]="pageTitle + '-section-2-subsection-1'" class="my-5">
+      <h4 class="text-slate-300 italic !font-bold text-xl">
+        My Projects
+      </h4>
+    </div>
+
+    <div class="grid xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
+      @for (project of projectService.myProjects; track project.name; let i = $index) {
+        <section
+          [id]="pageTitle + '-section-2-subsection-1-project-' + i + '-'"
+          class="w-auto max-w-sm rounded"
+          hlmCard
+        >
+          <div hlmCardHeader>
+            <h3 hlmCardTitle>{{ project.name }}</h3>
+            <p hlmCardDescription>{{ project.description }}</p>
+
+            <div hlmCardAction>
+              <button hlmBtn variant="link">
+                View Project >
+              </button>
+            </div>
+          </div>
+        </section>
+      }
+    </div>
+
+    <!-- Skills -->
+    <div [id]="pageTitle + '-section-2-subsection-2'" class="my-5">
+      <h4 class="text-slate-300 italic !font-bold text-xl">
+        My Skills
+      </h4>
+    </div>
+
+    <div class="grid xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
+      @for (skill of skillService.mySkills; track skill.name; let i = $index) {
+        <section
+          [id]="pageTitle + '-section-2-subsection-2-skill-' + i + '-'"
+          class="w-full max-w-sm rounded"
+          hlmCard
+        >
+          <div hlmCardHeader>
+            <h3 hlmCardTitle>{{ skill.name }}</h3>
+            <p hlmCardDescription>{{ skill.description }}</p>
+          </div>
+        </section>
+      }
+    </div>
+  </div>
 </div>

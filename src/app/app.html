@@ -1,11 +1,9 @@
-<div class="bg-[#F9FAFB]">
-
+<div class="w-screen overflow-x-hidden" style="background-color: var(--bg-primary);">
   <div class="max-w-[1200px] min-h-screen mx-auto flex flex-col">
     <app-navbar></app-navbar>
-    <main class="flex flex-col flex-1 w-screen">
-      {{ themeService.systemTheme() === 'dark' ? '🌙 Dark' : '☀️ Light' }}
+    <main class="flex flex-col flex-1">
       <router-outlet></router-outlet>
-      <app-footer></app-footer>
+      <!--      <app-footer></app-footer>-->
     </main>
   </div>
 </div>

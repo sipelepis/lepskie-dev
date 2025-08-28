@@ -1,6 +1,8 @@
 /* Root Level Styles*/
+@import "./variables/styles.css";
 @import "./font/styles.css";
 @import "./base/styles.css";
 /* Import styles */
+@import "./text/styles.css";
 @import "./a/styles.css";
 @import "./button/styles.css";

@@ -1,0 +1,33 @@
+:root {
+  /* Light theme variables */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --border: #e5e7eb;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --card-bg: #ffffff;
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06),
+  0 1px 2px 0 rgba(0, 0, 0, 0.04);
+
+  --foreground: #ffffff;
+  --background: #f9fafb;
+}
+
+.dark {
+  /* Dark theme variables (ChatGPT-inspired) */
+  --bg-primary: #0d0f12; /* deep charcoal, not pure black */
+  --bg-secondary: #1a1d21; /* slightly lighter, for surfaces */
+  --text-primary: #e4e6eb; /* soft off-white */
+  --text-secondary: #9ca3af; /* muted gray */
+  --border: #2a2e35; /* subtle border */
+  --accent: #10a37f; /* ChatGPT green */
+  --accent-hover: #0e8f6e; /* slightly darker green */
+  --card-bg: #1e2126; /* cards/surfaces */
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5),
+  0 1px 2px 0 rgba(0, 0, 0, 0.25);
+
+  --foreground: #0d0f12; /* deep charcoal, not pure black */
+  --background: #1a1d21; /* slightly lighter, for surfaces */
+}
